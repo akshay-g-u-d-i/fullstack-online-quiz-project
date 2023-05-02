@@ -19,13 +19,13 @@ Checked list of additional requirements:
 
 
 Skills that are assessed by the puzzle
-•	Communication
-•	Vocabulary
-•	General intelligence
-•	Attention for detail
-•	Critical thinking
-•	Observation skills
-•	Logical thinking
+1. Communication
+2. Vocabulary
+3. General intelligence
+4. Attention for detail
+5. Critical thinking
+6. Observation skills
+7. Logical thinking
 
 STEPS TO SETUP THE PROJECT
 1.	Signup and Login to start the Treasure Hunt.
@@ -39,8 +39,6 @@ SOLVING THE PUZZLE
 3. To begin the treasure hunt, user has to signup, after signup user has to login with those credentials.
 
 Click on “Let’s hunt” to start the treasure hunt
-
-
 
 ANSWERS TO THE QUESTIONS:
 
