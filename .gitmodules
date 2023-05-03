@@ -1,0 +1,3 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/akshay-g-u-d-i/elitmus-project-backend
