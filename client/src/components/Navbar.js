@@ -37,9 +37,9 @@ export default function Navbar(props) {
             
             (auth!== null)?
             (role==='admin')?
-            <Link to='/' className='navbar-brand ms-5 text-dark '>eLitmus- Admin</Link>:
-            <Link to = '/' className='navbar-brand ms-5 text-danger'> eLitmus</Link>:
-            <Link to='/' className="navbar-brand ms-5 text-danger">eLitmus</Link>
+            <Link to='/' className='navbar-brand ms-5 text-dark '>eLitmus- Admin New</Link>:
+            <Link to = '/' className='navbar-brand ms-5 text-danger'> eLitmus New</Link>:
+            <Link to='/' className="navbar-brand ms-5 text-danger">eLitmus New</Link>
           }
           
 
