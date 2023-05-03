@@ -1,6 +1,6 @@
 # elitmus-fullstack-interactive-puzzle-project
 
-*** The server folder in the current repository is also a repository please visit the following link to access 'server' folder
+*** The server folder in the current repository is also a repository, if in case it doesn't open please follow the below given link:
 https://github.com/akshay-g-u-d-i/elitmus-project-backend
 
 Answers to the questions are given at the last of this page
