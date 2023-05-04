@@ -39,11 +39,11 @@ export default function Home() {
         {(role === null) &&
           <div className=' row'>
             <div className='mb-2 bg-secondary text-white p-1 ps-5'><p className='d-inline text-warning'>Announcement </p>: The interactive puzzle is live! Click <Link to='/login' className='text-dark'>here</Link> to participate.</div>
-            <div className="col-8 rounded mt-3">
+            <div className="col-xl-8 col-lg-8 col-sm-12 rounded mt-3">
               <Carousel />
             </div>
 
-            <div className="col-3 rounded text-white ms-5">
+            <div className="col-xl-3 col-lg-3 col-sm-12 rounded text-white ms-5">
               <Captions />
             </div>
           </div>
@@ -52,11 +52,11 @@ export default function Home() {
         {(role === 'user') &&
           <div className='row'>
             
-            <div className="col-9 rounded my-3">
+            <div className="col-xl-9 col-lg-9 col-sm-12 rounded my-3">
               <Dashboard />
             </div>
 
-            <div className="col-3 rounded my-3 text-white">
+            <div className="col-xl-3 col-lg-3 col-sm-12 rounded my-3 text-white">
               <Captions />
             </div>
           </div>
@@ -65,11 +65,11 @@ export default function Home() {
         {(role === 'admin') &&
           <div className='row'>
 
-            <div className="col-6 rounded my-3">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 rounded my-3">
               <Analysisboard />
             </div>
 
-            <div className="col-6 rounded my-3 text-white">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 rounded my-3 text-white">
               <Performanceboard />
             </div>
           </div>

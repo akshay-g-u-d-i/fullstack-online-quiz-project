@@ -132,8 +132,8 @@ export default function Questions() {
 
                                         <div className='container text-center'>
 
-                                            <div className=" col-5 mb-4 ms-3 btn btn-success" onClick={() => handleselect("c")}> {qp[qno].c} </div>
-                                            <div className=" col-5 mb-4 ms-5 btn btn-success" onClick={() => handleselect("d")}> {qp[qno].d} </div>
+                                            <div className=" col-5  mb-4 ms-3 btn btn-success" onClick={() => handleselect("c")}> {qp[qno].c} </div>
+                                            <div className=" col-5  mb-4 ms-5 btn btn-success" onClick={() => handleselect("d")}> {qp[qno].d} </div>
 
                                         </div>
 
@@ -155,7 +155,7 @@ export default function Questions() {
 
                                         {savetime()}
 
-                                        <div className="col-6">
+                                        <div className="col-lg-6 col-xl-6 col-sm-12">
 
                                             <h3>OOPS!! DEADEND💀!!</h3>
 
@@ -173,7 +173,7 @@ export default function Questions() {
 
                                         </div>
 
-                                        <div className="col-6 mt-5">
+                                        <div className="col-lg-6 col-xl-6 col-sm-12 mt-5">
 
                                             <img src={require('../images/deadend.jpg')} alt=" not found" width={"100%"} />
 
@@ -188,7 +188,7 @@ export default function Questions() {
 
                                         {savetime()}
 
-                                        <div className="col-6">
+                                        <div className="col-lg-6 col-xl-6 col-sm-12">
 
                                             <h3>Treasure🪙 is yours!!</h3>
                                             <hr />
@@ -205,7 +205,7 @@ export default function Questions() {
 
                                         </div>
 
-                                        <div className="col-6 mt-5">
+                                        <div className="col-lg-6 col-xl-6 col-sm-12 mt-5">
 
                                             <img src={require('../images/tresure.jpg')} alt=" not found" width={"100%"} />
 

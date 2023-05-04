@@ -6,9 +6,10 @@ export default function Dashboard() {
   let navigate = useNavigate();
 
   const handletest = () => {
-    alert('The test will start on clicking ok button.')
+    if(window.confirm('The test will start on clicking ok button.')){
     localStorage.setItem('starttime', Date.now())
     navigate('/questions')
+    }
   }
 
 

@@ -61,7 +61,7 @@ export default function Login() {
         alert("Invalid email. Sign up on the website.")
         setspin(false)
         navigate("/signup")
-      
+
 
       }
     }
@@ -94,20 +94,20 @@ export default function Login() {
 
   return (
 
-      <div className=' mt-5 pt-5' >
+    <div className=' mt-5 pt-5' >
 
-        <div><Navbar getdata={(data) => { }} /></div>
+      <div><Navbar getdata={(data) => { }} /></div>
 
-        {(spin===false)?
+      {(spin === false) ?
         <div>
 
           <div className="row">
 
-            <div className="col-8 rounded ms-4 mt-4">
+            <div className="col-xl-8 col-lg-8 col-sm-12 rounded ms-4 mt-4">
               <Carousel />
             </div>
 
-            <div className="col-3 shadow-lg rounded ms-5 " style={{ maxHeight: "430px", marginTop: "50px" }}>
+            <div className="col-xl-3 col-lg-3 col-sm-12 shadow-lg rounded ms-5 " style={{ maxHeight: "430px", marginTop: "50px" }}>
 
               <h5 className='text-dark ps-4 pt-4'>Login</h5>
               <form className='p-4'>
@@ -140,16 +140,14 @@ export default function Login() {
 
           </div>
 
-        </div>: 
+        </div> :
+        <LoadingSpinner />
+      }
 
-        <div> <LoadingSpinner /></div>
-
-        }
-
-        <div><Footer /></div>
+      <div><Footer /></div>
 
 
-      </div >
+    </div >
 
   )
 }
