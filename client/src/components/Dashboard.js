@@ -6,7 +6,7 @@ export default function Dashboard() {
   let navigate = useNavigate();
 
   const handletest = () => {
-    if(window.confirm('The test will start on clicking ok button.')){
+    if(window.confirm('The test will start on clicking OK button.')){
     localStorage.setItem('starttime', Date.now())
     navigate('/questions')
     }
@@ -18,8 +18,8 @@ export default function Dashboard() {
 
       <div>
 
-        {(localStorage.getItem('authTkn') !== null) && <h4 className='text-success p-3'>Test Instructions</h4>}
-        {(localStorage.getItem('authTkn') === null) && <h4 className='text-success p-3'>Bulletin</h4>}
+        {(localStorage.getItem('authTkn') !== null) && <h4 className='text-success p-3'>THE TREASURE HUNT - Game Instructions</h4>}
+        {(localStorage.getItem('authTkn') === null) && <h4 className='text-success p-3'>Sign in to view</h4>}
 
       </div>
 
