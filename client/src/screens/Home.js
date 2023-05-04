@@ -65,11 +65,11 @@ export default function Home() {
         {(role === 'admin') &&
           <div className='row'>
 
-            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 rounded my-3">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 rounded my-3">
               <Analysisboard />
             </div>
 
-            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 rounded my-3 text-white">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 rounded my-3 text-white">
               <Performanceboard />
             </div>
           </div>

@@ -28,10 +28,11 @@ export default function Performanceboard() {
 
         if (res.success) {
             
+            console.log("first time")
             // userdata = res.testdata
             setuserdata(res.testdata)
             // console.log(userdata)
-
+            
         }
 
     }
