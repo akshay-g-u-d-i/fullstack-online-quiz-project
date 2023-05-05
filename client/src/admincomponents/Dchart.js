@@ -30,7 +30,7 @@ export default function Dchart(props) {
 
     return (
         <div style={{ maxHeight: "400px" }}>
-            <h5 className='text-white'>#Questions solved VS #Students <span className='text-muted mt-2'>Hover to see results</span></h5>
+            <h5 className='text-white'>#Questions solved VS #Students <span className='text-muted'>Hover to see results</span></h5>
             <div> 
             <Doughnut data={data}/>
             

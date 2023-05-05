@@ -55,6 +55,7 @@ export default function Analysisboard() {
                 let curno = key.score/10
                 arr[curno] += 1
             }
+            millisecs = (millisecs)/res.testdata.length
             setminutes(Math.floor(millisecs/60000))
             setseconds(Math.floor(millisecs/1000) - Math.floor(millisecs/60000)*60)
             setresarray(arr)
@@ -104,6 +105,7 @@ export default function Analysisboard() {
 
             <div>
                 <h4 className='text-white p-3'>Analysis Board</h4>
+                <h6 className='text-muted ms-3'>(Scroll down to view Performance Board)</h6>
             </div>
 
             {(spin === false) ?
@@ -119,11 +121,11 @@ export default function Analysisboard() {
                         <h5 className='text-success'>Number of students who lost on penultimate step of finding treasure: <span className='text-danger'>{resarray[6]} </span> </h5>
                         <hr className='text-white' />
                         <h5 className='text-white'>Average time spent in playing game: <span className='text-danger'> {(minutes<10)? ('0'+minutes) : (minutes)}:{(seconds<10)? ('0'+seconds): (seconds)}</span></h5>
-                        <h6 className='text-muted mt-3'>Scroll to view Performance Board</h6>
+                        
 
                     </div>
 
-                    <div className='col-4 text-center'>
+                    <div className='col-4'>
                         <Dchart resarray = {resarray} />
                     </div>
 
