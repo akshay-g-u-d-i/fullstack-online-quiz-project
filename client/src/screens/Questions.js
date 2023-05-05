@@ -55,6 +55,13 @@ export default function Questions() {
         seconds = seconds - minutes * 60
     }
 
+    const goback = () => {
+
+        setqno(qno)
+        setcorrect(true)
+
+    }
+
 
     const saveanswers = async () => {
 
@@ -78,7 +85,7 @@ export default function Questions() {
         })
 
         const res = await req.json();
- 
+
         if (res.success) {
             setspin(false)
             alert("Answers submitted succesfully.")
@@ -119,7 +126,7 @@ export default function Questions() {
                                             {(qno === 1 && <img src={require('../images/question2.jpg')} alt='not found' width={"100%"} />)}
                                             {(qno === 3 && <img src={require('../images/question4.jpg')} alt='not found' width={"25%"} />)}
                                             {(qno === 4 && <img src={require('../images/question5.jpg')} alt='not found' width={"100%"} />)}
- 
+
 
                                         </div>
 
@@ -155,29 +162,50 @@ export default function Questions() {
 
                                         {savetime()}
 
-                                        <div className="col-lg-6 col-xl-6 col-sm-12">
+                                        {(qno < 5) ?
+                                            <>
+                                                <div className="col-lg-6 col-xl-6 col-sm-12">
+                                                    <h3 className='text-danger'>No way ahead! ❌</h3>
+                                                    <hr />
+                                                    <div className='btn btn-success d-block mt-5 mb-3' onClick={goback}> Take U-Turn</div>
+                                                    <div className='btn btn-danger d-block' onClick={handleclick}>Submit</div>
 
-                                            <h3>OOPS!! DEADEND💀!!</h3>
+                                                </div>
 
-                                            <hr />
-                                            <h5>Here are the results:</h5>
-                                            <h6>Total questions: {maxi}</h6>
-                                            <h6>Correctly answered: {score}</h6>
-                                            <h6>Time taken: {(minutes < 10) ? ('0' + minutes) : (minutes)}:{(seconds < 10) ? ('0' + seconds) : (seconds)}</h6>
-                                            <h6>Total score: {score * 10}</h6>
+                                                <div className="col-lg-6 col-xl-6 col-sm-12 mt-5">
 
-                                            <hr />
-                                            <div className='btn btn-success d-block' onClick={handleclick}>Submit</div>
+                                                    <img src={require('../images/deadend.jpg')} alt=" not found" width={"100%"} />
 
-                                            <hr />
+                                                </div>
+                                            </> :
 
-                                        </div>
+                                            <>
+                                                <div className="col-lg-6 col-xl-6 col-sm-12">
 
-                                        <div className="col-lg-6 col-xl-6 col-sm-12 mt-5">
+                                                    <h3>OOPS!! DEADEND💀!!</h3>
 
-                                            <img src={require('../images/deadend.jpg')} alt=" not found" width={"100%"} />
+                                                    <hr />
+                                                    <h5>Here are the results:</h5>
+                                                    <h6>Total questions: {maxi}</h6>
+                                                    <h6>Correctly answered: {score}</h6>
+                                                    <h6>Time taken: {(minutes < 10) ? ('0' + minutes) : (minutes)}:{(seconds < 10) ? ('0' + seconds) : (seconds)}</h6>
+                                                    <h6>Total score: {score * 10}</h6>
 
-                                        </div>
+                                                    <hr />
+                                                    <div className='btn btn-success d-block' onClick={handleclick}>Submit</div>
+
+                                                    <hr />
+
+                                                </div>
+
+                                                <div className="col-lg-6 col-xl-6 col-sm-12 mt-5">
+
+                                                    <img src={require('../images/deadend.jpg')} alt=" not found" width={"100%"} />
+
+                                                </div>
+                                            </>
+
+                                        }
 
 
                                     </div>
