@@ -162,7 +162,7 @@ export default function Questions() {
 
                                         {savetime()}
 
-                                        {(qno < 5) ?
+                                        {(qno < 4) ?
                                             <>
                                                 <div className="col-lg-6 col-xl-6 col-sm-12">
                                                     <h3 className='text-danger'>No way ahead! ❌</h3>
