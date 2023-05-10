@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function Timer(props){
 
-    const max = 30*60
+    const max = 30*60 -  Math.floor(props.time/1000)
     const [counter, setCounter] = useState(max);
  
     useEffect(() =>{
