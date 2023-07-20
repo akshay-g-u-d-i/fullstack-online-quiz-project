@@ -5,7 +5,7 @@ import React from 'react'
 export default function Carousel() {
     return (
         <div className='container-fluid'>
-            <h5  className='text-dark text-center fst-italic'>Salient features of our website</h5>
+            <h5  className='text-dark text-center fst-italic'>Salient features of the website</h5>
             <div id="carouselExampleFade" className="carousel slide carousel-fade   " data-bs-ride="carousel" >
                 <div className="carousel-inner" id = "carousel">
                     

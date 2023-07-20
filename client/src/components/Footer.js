@@ -5,10 +5,10 @@ export default function Footer() {
     <div className='container-fluid mx-auto bg-secondary'>
       <footer className=" py-3 my-4 border-top pt-5">
         <div>
-          <div className="text-white text-center">© 2023 eLitmus inc</div>
+          <div className="text-white text-center">© 2023</div>
         </div>
         <div className="text-white text-center mb-5">
-          Designed and developed by Akshay
+          Designed and Developed by Akshay
         </div>
       </footer>
     </div>
