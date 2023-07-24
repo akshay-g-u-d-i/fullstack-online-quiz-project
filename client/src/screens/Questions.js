@@ -108,7 +108,13 @@ export default function Questions() {
             {(localStorage.getItem('authTkn') !== null) &&
                 <div >
                     <h3 className="text-white text-center p-5 rounded shadow-lg bg-danger">Welcome to treasure hunt! Your aim is to find the hidden treasure by solving the clues!</h3>
-                    <div className='text-white text-center d-flex'> <div className='mx-auto bg-dark rounded shadow-lg p-2'><Timer time= {Date.now() - localStorage.getItem('starttime')} /></div></div>
+                    {(qno<maxi-1) &&
+                        <div className='text-white text-center d-flex'>
+                            <div className='mx-auto bg-dark rounded shadow-lg p-2'>
+                                <Timer time= {Date.now() - localStorage.getItem('starttime')} />
+                            </div>
+                        </div> 
+                    }
 
                     {(spin === false) ?
                         <div className="row">

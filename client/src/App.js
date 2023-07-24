@@ -9,6 +9,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import Signup from './screens/Signup';
 import Questions from './screens/Questions';
+import Parent from './screens/Parent.js';
  
 
 export default function App() {
