@@ -41,7 +41,7 @@ export default function Performanceboard() {
 
 
     return (
-        <div className='bg-dark rounded' style={{ height: "550px" }}>
+        <div className=' rounded' style={{ height: "550px", backgroundColor:"#2d1352" }}>
 
             <div>
                 <h4 className='text-white p-3'>Performance Board</h4>

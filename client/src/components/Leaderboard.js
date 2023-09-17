@@ -42,7 +42,7 @@ export default function Leaderboard() {
 
 
   return (
-    <div className='rounded shadow-lg p-2 ' style={{ height: "550px" }}>
+    <div className='rounded shadow-lg p-2 ' style={{ height: "550px", backgroundColor: (localStorage.getItem('authTkn') !== null)? "#2d1352": "white"} }>
       <h5 className='m-3 text-success'>Leaderboard</h5>
 
       {(localStorage.getItem('authTkn') !== null)?

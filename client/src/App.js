@@ -9,7 +9,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import Signup from './screens/Signup';
 import Questions from './screens/Questions';
-import Parent from './screens/Parent.js';
+
  
 
 export default function App() {
@@ -20,6 +20,7 @@ export default function App() {
           <Route exact path = "/login" element = {<Login />} />
           <Route exact path = "/signup" element = {<Signup />} />
           <Route exact path = '/questions' element = {<Questions />} />
+
         </Routes>
     </Router>
   );

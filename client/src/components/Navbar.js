@@ -31,46 +31,51 @@ export default function Navbar(props) {
 
   return (
 
-    <div>
-      <nav className="navbar fixed-top navbar-light bg-warning py-4 shadow-lg">
-        <div className="container-fluid">
+
+    <nav className="navbar fixed-top shadow-lg py-3" style={{ backgroundColor:  "#022451"  }}>
+      <div className="container-fluid">
+
+        {
+
+          (auth !== null) ?
+            (role === 'admin') ?
+              <Link to='/' className='navbar-brand ms-5 text-warning '><b>iTest-Admin</b></Link> :
+              <>
+                <Link to='/' className="navbar-brand ms-5 text-warning"><b>iTest</b></Link>
+                <div className="ms-4 p-2  text-white">Hi, {localStorage.getItem('username')}!</div>
+              </> :
+            <Link to='/' className='navbar-brand ms-5 text-warning'><b>iTest</b> </Link>
+        }
+
+
+        <div className="d-flex">
 
           {
+            (localStorage.getItem('authTkn') === null)
+              ?
 
-            (auth !== null) ?
-              (role === 'admin') ?
-                <Link to='/' className='navbar-brand ms-5 text-dark '>iTest-Admin</Link> :
-                <Link to='/' className='navbar-brand ms-5 text-danger'> iTest</Link> :
-              <Link to='/' className="navbar-brand ms-5 text-danger">iTest</Link>
+
+              <div>
+                <Link to='/signup' className='text-white me-5' style={{ textDecoration: "none" }}><b>Sign up</b></Link>
+                <Link to='/login' className='text-white me-5' style={{ textDecoration: "none" }}><b>Login</b></Link>
+              </div>
+
+              :
+              <>
+
+                <div className='p-2 text-white d-inline' >
+                  <span className='ms-auto  text-danger text-decoration-underline me-5' onClick={handlelogout} style={{ cursor: "pointer" }}><b>Logout</b></span>
+                </div>
+              </>
+
           }
 
 
-          <div className="d-flex">
 
-            {
-              (localStorage.getItem('authTkn') === null)
-                ?
-
-                <div>
-                  <Link to='/signup' className='btn text-dark me-2'>Sign up</Link>
-                  <Link to='/login' className='btn btn-success rounded rounded-3 text-white me-5'>Login</Link>
-                </div>
-
-                :
-
-                <div>
-                  <div className="btn btn-success rounded text-white me-3 bg-dark">Welcome {localStorage.getItem('username')}</div>
-                  <div className='btn btn-danger rounded rounded-3 text-white me-5' onClick={handlelogout}>Log Out</div>
-                </div>
-
-            }
-
-
-
-          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+
 
 
   )

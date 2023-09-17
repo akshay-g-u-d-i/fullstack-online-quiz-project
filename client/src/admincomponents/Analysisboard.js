@@ -101,7 +101,7 @@ export default function Analysisboard() {
     }
 
     return (
-        <div className='bg-dark rounded pb-5' style={{height:"650px"}}>
+        <div className=' rounded pb-5' style={{height:"650px", backgroundColor:"#2d1352"}}>
 
             <div>
                 <h4 className='text-white p-3'>Analysis Board</h4>

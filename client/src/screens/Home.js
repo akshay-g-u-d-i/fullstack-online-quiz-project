@@ -29,16 +29,16 @@ export default function Home() {
 
 
   return (
-    <div className=' mt-5 pt-5'>
+    <>
+    <div className='mt-4 pt-4'>
 
       <div><Navbar getdata={getdata}/> </div>
       
-
       <div className="container-fluid">
 
         {(role === null) &&
-          <div className=' row'>
-            <div className='mb-2 bg-secondary text-white p-1 ps-5'><p className='d-inline text-warning'>Announcement </p>: The interactive puzzle is live! Click <Link to='/login' className='text-dark'>here</Link> to participate.</div>
+          <div className=' row mt-5'>
+            {/* <div className='mb-2 bg-secondary text-white p-1 ps-5'><p className='d-inline text-warning'>Announcement </p>: The interactive puzzle is live! <Link to='/login' className='text-danger'>Click here</Link> to participate.</div> */}
             <div className="col-xl-8 col-lg-8 col-sm-12 rounded mt-3">
               <Carousel />
             </div>
@@ -50,7 +50,7 @@ export default function Home() {
         }
 
         {(role === 'user') &&
-          <div className='row'>
+          <div className='row mt-5'>
             
             <div className="col-xl-9 col-lg-9 col-sm-12 rounded my-3">
               <Dashboard />
@@ -63,7 +63,7 @@ export default function Home() {
         }
 
         {(role === 'admin') &&
-          <div className='row'>
+          <div className='row mt-5'>
 
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 rounded my-3">
               <Analysisboard />
@@ -78,8 +78,10 @@ export default function Home() {
 
       </div>
 
+    </div>
+  
+    <div className='mt-5'><Footer /></div> 
+    </>
+)
 
-      <div><Footer /></div>
-    </div >
-  )
 }

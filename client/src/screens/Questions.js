@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import qp from '../questionpaper'
 import Timer from '../componentsuser/Timer'
 import { useNavigate } from 'react-router-dom'
@@ -6,6 +6,17 @@ import { backendlink } from '../helper'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 export default function Questions() {
+    // const [currtime, setcurrtime] = useState(0)
+    // useEffect(() => {
+    //   let timeid= setTimeout(()=>{
+    //     setcurrtime(currtime+1)
+    //   },1000)
+
+    //   return ()=>{
+    //     clearTimeout(timeid)
+    //   }
+    // })
+    
 
     const [spin, setspin] = useState(false)
 
@@ -43,7 +54,6 @@ export default function Questions() {
         // console.log(score*10)
         setspin(true)
         saveanswers()
-
     }
 
     const savetime = () => {
@@ -104,16 +114,15 @@ export default function Questions() {
 
 
     return (
-        <div className='bg-warning' style={{ minHeight: "700px" }}>
+        <div style={{ minHeight: "700px", backgroundColor: "#022451" }}>
             {(localStorage.getItem('authTkn') !== null) &&
                 <div >
-                    <h3 className="text-white text-center p-5 rounded shadow-lg bg-danger">Welcome to treasure hunt! Your aim is to find the hidden treasure by solving the clues!</h3>
-                    {(correct!==false && qno<maxi) &&
-                        <div className='text-white text-center d-flex'>
-                            <div className='mx-auto bg-dark rounded shadow-lg p-2'>
-                                <Timer time= {Date.now() - localStorage.getItem('starttime')} />
-                            </div>
-                        </div> 
+                    
+                    {(qno<maxi) &&
+                    <div className="text-white bg-dark p-4">{(correct!==false) && <div className='d-inline me-5'><b>Question {qno+1}</b></div>} Remaining time: <Timer time= {Date.now() - localStorage.getItem('starttime')} /></div>
+                    }
+                    {(qno==maxi) &&
+                    <div className="text-white bg-dark text-center mx-auto p-4"> Congratulations!! You've solved all questions.</div>
                     }
 
                     {(spin === false) ?
@@ -123,7 +132,7 @@ export default function Questions() {
 
                                 <div>
 
-                                    <div className="col-6 mx-auto bg-light mt-5 pt-3 pb-3 rounded shadow-lg">
+                                    <div className="col-6 mx-auto bg-dark text-white mt-5 pt-3 pb-3 rounded shadow-lg">
 
                                         <div className=" m-3 px-3 rounded">
                                             <p className='fs-5'>{qp[qno].q}</p>
@@ -163,7 +172,7 @@ export default function Questions() {
                                 :
 
                                 (correct === false) ?
-                                    <div className="col-6 mx-auto bg-light mt-5 p-5 rounded shadow-lg row">
+                                    <div className="col-6 mx-auto bg-dark mt-5 p-5 rounded shadow-lg row">
 
 
                                         {savetime()}
@@ -186,9 +195,9 @@ export default function Questions() {
                                             </> :
 
                                             <>
-                                                <div className="col-lg-6 col-xl-6 col-sm-12">
+                                                <div className="col-lg-6 col-xl-6 col-sm-12 text-white">
 
-                                                    <h3>OOPS!! DEADEND💀!!</h3>
+                                                    <h3 className='text-danger'>OOPS!! DEADEND💀!!</h3>
 
                                                     <hr />
                                                     <h5>Here are the results:</h5>
@@ -218,13 +227,13 @@ export default function Questions() {
 
                                     :
 
-                                    <div className="col-6 mx-auto bg-light mt-5 p-5 rounded shadow-lg row">
+                                    <div className="col-6 mx-auto bg-light mt-5 p-5 rounded shadow-lg row bg-dark">
 
                                         {savetime()}
 
-                                        <div className="col-lg-6 col-xl-6 col-sm-12">
+                                        <div className="col-lg-6 col-xl-6 col-sm-12 text-white">
 
-                                            <h3>Treasure🪙 is yours!!</h3>
+                                            <h3 className='text-success'>Treasure🪙 is yours!!</h3>
                                             <hr />
                                             <h5>Here are the results:</h5>
                                             <h6>Total questions: {maxi}</h6>

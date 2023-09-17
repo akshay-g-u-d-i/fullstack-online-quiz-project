@@ -9,14 +9,20 @@ export default function Carousel() {
             <div id="carouselExampleFade" className="carousel slide carousel-fade   " data-bs-ride="carousel" >
                 <div className="carousel-inner" id = "carousel">
                     
-                    <div className="carousel-item">
-                        <img src={require('../images/admindb.jpg')} className=" d-block mx-auto" style={{width:"100%"}} alt="..." />
-                    </div>
                     <div className="carousel-item active">
-                        <img src= {require('../images/userdb.jpg')} className="d-block mx-auto" alt="..." style={{width:"100%"}} />
+                        <img src={require('../images/crslimg1.jpg')} className=" d-block mx-auto" style={{width:"100%"}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={require('../images/treasurehunt.jpg')} className="d-block mx-auto" alt="..." style={{width:"100%"}} />
+                        <img src= {require('../images/crslimg5.png')} className="d-block mx-auto" alt="..." style={{width:"100%"}} />
+                    </div>
+                    <div className="carousel-item">
+                        <img src={require('../images/crslimg2.png')} className="d-block mx-auto" alt="..." style={{width:"100%"}} />
+                    </div>
+                    <div className="carousel-item ">
+                        <img src= {require('../images/crslimg3.png')} className="d-block mx-auto" alt="..." style={{width:"100%"}} />
+                    </div>
+                    <div className="carousel-item">
+                        <img src={require('../images/crslimg4.png')} className="d-block mx-auto" alt="..." style={{width:"100%"}} />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

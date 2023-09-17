@@ -14,7 +14,7 @@ export default function Dashboard() {
 
 
   return (
-    <div className='shadow-lg rounded' style={{ height: "550px" }}>
+    <div className='shadow-lg rounded ' style={{ height: "550px", backgroundColor: "#2d1352" }}>
 
       <div>
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
       <div className="container-fluid">
         {(localStorage.getItem('authTkn') !== null) &&
           // <li><h5><div className='btn btn-info p-1' onClick={handletest}>Click here to enter the test</div></h5></li>
-          <div>
+          <div className='text-white'>
             <ul>
               <li>This is a Treasure Hunt game</li>
               <li>Time limit: <span className='text-danger'>30 minutes</span></li>
