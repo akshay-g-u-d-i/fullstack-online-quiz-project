@@ -42,7 +42,8 @@ export default function Navbar(props) {
               <Link to='/' className='navbar-brand ms-5 text-warning '><b>iTest-Admin</b></Link> :
               <>
                 <Link to='/' className="navbar-brand ms-5 text-warning"><b>iTest</b></Link>
-                <div className="ms-4 p-2  text-white">Hi, {localStorage.getItem('username')}!</div>
+                <img className='ms-3' src={localStorage.getItem('userpicture')} alt="" width={"2.5%"} style={{borderRadius:"25%"}}/>
+                <div className=" me-auto p-2  text-white">    Hi, {localStorage.getItem('username')}! </div>
               </> :
             <Link to='/' className='navbar-brand ms-5 text-warning'><b>iTest</b> </Link>
         }
